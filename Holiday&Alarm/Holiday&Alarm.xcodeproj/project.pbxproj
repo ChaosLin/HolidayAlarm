@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5929782C1854C2BE00DEC997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5929782B1854C2BE00DEC997 /* Foundation.framework */; };
+		5929782E1854C2BE00DEC997 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5929782D1854C2BE00DEC997 /* CoreGraphics.framework */; };
+		592978301854C2BE00DEC997 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5929782F1854C2BE00DEC997 /* UIKit.framework */; };
+		592978361854C2BE00DEC997 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592978341854C2BE00DEC997 /* InfoPlist.strings */; };
+		592978381854C2BE00DEC997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592978371854C2BE00DEC997 /* main.m */; };
+		5929783C1854C2BE00DEC997 /* HAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5929783B1854C2BE00DEC997 /* HAAppDelegate.m */; };
+		5929783E1854C2BE00DEC997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5929783D1854C2BE00DEC997 /* Images.xcassets */; };
+		592978451854C2BE00DEC997 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592978441854C2BE00DEC997 /* XCTest.framework */; };
+		592978461854C2BE00DEC997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5929782B1854C2BE00DEC997 /* Foundation.framework */; };
+		592978471854C2BE00DEC997 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5929782F1854C2BE00DEC997 /* UIKit.framework */; };
+		5929784F1854C2BE00DEC997 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5929784D1854C2BE00DEC997 /* InfoPlist.strings */; };
+		592978511854C2BE00DEC997 /* Holiday_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */; };
+		5929785E1854D4B800DEC997 /* ping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5929785D1854D4B800DEC997 /* ping.caf */; };
+		5954183418BC170C00C68386 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954183318BC170C00C68386 /* DateUtils.m */; };
+		597D4EF0185F404600291A6B /* HASituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EEF185F404600291A6B /* HASituation.m */; };
+		597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF2185F42ED00291A6B /* HAAlarm.m */; };
+		597D4EF6185F440600291A6B /* HADayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF5185F440600291A6B /* HADayObject.m */; };
+		597D4EF9185F51E800291A6B /* HAAlarmScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF8185F51E800291A6B /* HAAlarmScheduler.m */; };
+		597D4EFC185F534100291A6B /* HACalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EFB185F534100291A6B /* HACalendarManager.m */; };
+		597D4EFF185F54B600291A6B /* HASituationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EFE185F54B600291A6B /* HASituationManager.m */; };
+		597D4F03185F55A400291A6B /* HASaveAndLoadClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4F02185F55A400291A6B /* HASaveAndLoadClass.m */; };
+		599AECF418561BF500FE2D79 /* HANotificationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599AECF218561BF500FE2D79 /* HANotificationListViewController.m */; };
+		599AECF518561BF500FE2D79 /* HANotificationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599AECF318561BF500FE2D79 /* HANotificationListViewController.xib */; };
+		59DE1B7B18BCE216006508E0 /* CXCalendarCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7018BCE216006508E0 /* CXCalendarCellView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59DE1B7C18BCE216006508E0 /* CXCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7218BCE216006508E0 /* CXCalendarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59DE1B7D18BCE216006508E0 /* CXMultidateCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7418BCE216006508E0 /* CXMultidateCalendarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59DE1B7E18BCE216006508E0 /* UIButton+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59DE1B7F18BCE216006508E0 /* UIColor+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59DE1B8018BCE216006508E0 /* UILabel+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6A21AB018BF3D85003EB3E7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */; };
+		D6A21AB118BF3D85003EB3E7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */; };
+		D6A21AB218BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA818BF3D85003EB3E7 /* FMDatabaseAdditions.m */; };
+		D6A21AB318BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA818BF3D85003EB3E7 /* FMDatabaseAdditions.m */; };
+		D6A21AB418BF3D85003EB3E7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AAA18BF3D85003EB3E7 /* FMDatabasePool.m */; };
+		D6A21AB518BF3D85003EB3E7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AAA18BF3D85003EB3E7 /* FMDatabasePool.m */; };
+		D6A21AB618BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AAC18BF3D85003EB3E7 /* FMDatabaseQueue.m */; };
+		D6A21AB718BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AAC18BF3D85003EB3E7 /* FMDatabaseQueue.m */; };
+		D6A21ABA18BF3D85003EB3E7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AAF18BF3D85003EB3E7 /* FMResultSet.m */; };
+		D6A21ABB18BF3D85003EB3E7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AAF18BF3D85003EB3E7 /* FMResultSet.m */; };
+		D6A21ABD18BF3F44003EB3E7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A21ABC18BF3F44003EB3E7 /* libsqlite3.dylib */; };
+		D6A21AC018BF5155003EB3E7 /* HADBAccessClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21ABF18BF5155003EB3E7 /* HADBAccessClass.m */; };
+		D6A21AC118BF5155003EB3E7 /* HADBAccessClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21ABF18BF5155003EB3E7 /* HADBAccessClass.m */; };
+		D6A21AC918C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AC818C03C0F003EB3E7 /* HADBAccessClassHelper.m */; };
+		D6A21ACA18C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AC818C03C0F003EB3E7 /* HADBAccessClassHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		592978481854C2BE00DEC997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592978201854C2BE00DEC997 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592978271854C2BE00DEC997;
+			remoteInfo = "Holiday&Alarm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		592978281854C2BE00DEC997 /* Holiday&Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holiday&Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5929782B1854C2BE00DEC997 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5929782D1854C2BE00DEC997 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5929782F1854C2BE00DEC997 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		592978331854C2BE00DEC997 /* Holiday&Alarm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Holiday&Alarm-Info.plist"; sourceTree = "<group>"; };
+		592978351854C2BE00DEC997 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		592978371854C2BE00DEC997 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		592978391854C2BE00DEC997 /* Holiday&Alarm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Holiday&Alarm-Prefix.pch"; sourceTree = "<group>"; };
+		5929783A1854C2BE00DEC997 /* HAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAAppDelegate.h; sourceTree = "<group>"; };
+		5929783B1854C2BE00DEC997 /* HAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HAAppDelegate.m; sourceTree = "<group>"; };
+		5929783D1854C2BE00DEC997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		592978431854C2BE00DEC997 /* Holiday&AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Holiday&AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		592978441854C2BE00DEC997 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5929784C1854C2BE00DEC997 /* Holiday&AlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Holiday&AlarmTests-Info.plist"; sourceTree = "<group>"; };
+		5929784E1854C2BE00DEC997 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Holiday_AlarmTests.m; sourceTree = "<group>"; };
+		5929785D1854D4B800DEC997 /* ping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ping.caf; sourceTree = "<group>"; };
+		5954183218BC170C00C68386 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		5954183318BC170C00C68386 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		597D4EEE185F404600291A6B /* HASituation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASituation.h; sourceTree = "<group>"; };
+		597D4EEF185F404600291A6B /* HASituation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASituation.m; sourceTree = "<group>"; };
+		597D4EF1185F42ED00291A6B /* HAAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAAlarm.h; sourceTree = "<group>"; };
+		597D4EF2185F42ED00291A6B /* HAAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAAlarm.m; sourceTree = "<group>"; };
+		597D4EF4185F440600291A6B /* HADayObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADayObject.h; sourceTree = "<group>"; };
+		597D4EF5185F440600291A6B /* HADayObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADayObject.m; sourceTree = "<group>"; };
+		597D4EF7185F51E800291A6B /* HAAlarmScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAAlarmScheduler.h; sourceTree = "<group>"; };
+		597D4EF8185F51E800291A6B /* HAAlarmScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAAlarmScheduler.m; sourceTree = "<group>"; };
+		597D4EFA185F534100291A6B /* HACalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACalendarManager.h; sourceTree = "<group>"; };
+		597D4EFB185F534100291A6B /* HACalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACalendarManager.m; sourceTree = "<group>"; };
+		597D4EFD185F54B600291A6B /* HASituationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASituationManager.h; sourceTree = "<group>"; };
+		597D4EFE185F54B600291A6B /* HASituationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASituationManager.m; sourceTree = "<group>"; };
+		597D4F01185F55A400291A6B /* HASaveAndLoadClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASaveAndLoadClass.h; sourceTree = "<group>"; };
+		597D4F02185F55A400291A6B /* HASaveAndLoadClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASaveAndLoadClass.m; sourceTree = "<group>"; };
+		5994C8A218608FF6004F8D38 /* HACommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACommonMacros.h; sourceTree = "<group>"; };
+		599AECF118561BF500FE2D79 /* HANotificationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANotificationListViewController.h; sourceTree = "<group>"; };
+		599AECF218561BF500FE2D79 /* HANotificationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANotificationListViewController.m; sourceTree = "<group>"; };
+		599AECF318561BF500FE2D79 /* HANotificationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HANotificationListViewController.xib; sourceTree = "<group>"; };
+		59DE1B6E18BCE216006508E0 /* Calendar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Calendar-Prefix.pch"; sourceTree = "<group>"; };
+		59DE1B6F18BCE216006508E0 /* CXCalendarCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCalendarCellView.h; sourceTree = "<group>"; };
+		59DE1B7018BCE216006508E0 /* CXCalendarCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCalendarCellView.m; sourceTree = "<group>"; };
+		59DE1B7118BCE216006508E0 /* CXCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCalendarView.h; sourceTree = "<group>"; };
+		59DE1B7218BCE216006508E0 /* CXCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCalendarView.m; sourceTree = "<group>"; };
+		59DE1B7318BCE216006508E0 /* CXMultidateCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMultidateCalendarView.h; sourceTree = "<group>"; };
+		59DE1B7418BCE216006508E0 /* CXMultidateCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMultidateCalendarView.m; sourceTree = "<group>"; };
+		59DE1B7518BCE216006508E0 /* UIButton+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CXCalendar.h"; sourceTree = "<group>"; };
+		59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CXCalendar.m"; sourceTree = "<group>"; };
+		59DE1B7718BCE216006508E0 /* UIColor+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CXCalendar.h"; sourceTree = "<group>"; };
+		59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CXCalendar.m"; sourceTree = "<group>"; };
+		59DE1B7918BCE216006508E0 /* UILabel+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CXCalendar.h"; sourceTree = "<group>"; };
+		59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CXCalendar.m"; sourceTree = "<group>"; };
+		D6A21AA518BF3D85003EB3E7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		D6A21AA718BF3D85003EB3E7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		D6A21AA818BF3D85003EB3E7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		D6A21AA918BF3D85003EB3E7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		D6A21AAA18BF3D85003EB3E7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		D6A21AAB18BF3D85003EB3E7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		D6A21AAC18BF3D85003EB3E7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		D6A21AAE18BF3D85003EB3E7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		D6A21AAF18BF3D85003EB3E7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		D6A21ABC18BF3F44003EB3E7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D6A21ABE18BF5155003EB3E7 /* HADBAccessClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADBAccessClass.h; sourceTree = "<group>"; };
+		D6A21ABF18BF5155003EB3E7 /* HADBAccessClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADBAccessClass.m; sourceTree = "<group>"; };
+		D6A21AC718C03C0F003EB3E7 /* HADBAccessClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADBAccessClassHelper.h; sourceTree = "<group>"; };
+		D6A21AC818C03C0F003EB3E7 /* HADBAccessClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADBAccessClassHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592978251854C2BE00DEC997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6A21ABD18BF3F44003EB3E7 /* libsqlite3.dylib in Frameworks */,
+				5929782E1854C2BE00DEC997 /* CoreGraphics.framework in Frameworks */,
+				592978301854C2BE00DEC997 /* UIKit.framework in Frameworks */,
+				5929782C1854C2BE00DEC997 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592978401854C2BE00DEC997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592978451854C2BE00DEC997 /* XCTest.framework in Frameworks */,
+				592978471854C2BE00DEC997 /* UIKit.framework in Frameworks */,
+				592978461854C2BE00DEC997 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5929781F1854C2BE00DEC997 = {
+			isa = PBXGroup;
+			children = (
+				592978311854C2BE00DEC997 /* Holiday&Alarm */,
+				5929784A1854C2BE00DEC997 /* Holiday&AlarmTests */,
+				5929782A1854C2BE00DEC997 /* Frameworks */,
+				592978291854C2BE00DEC997 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		592978291854C2BE00DEC997 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592978281854C2BE00DEC997 /* Holiday&Alarm.app */,
+				592978431854C2BE00DEC997 /* Holiday&AlarmTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5929782A1854C2BE00DEC997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6A21ABC18BF3F44003EB3E7 /* libsqlite3.dylib */,
+				5929782B1854C2BE00DEC997 /* Foundation.framework */,
+				5929782D1854C2BE00DEC997 /* CoreGraphics.framework */,
+				5929782F1854C2BE00DEC997 /* UIKit.framework */,
+				592978441854C2BE00DEC997 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		592978311854C2BE00DEC997 /* Holiday&Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				59DE1B6C18BCE1F8006508E0 /* OpenResource */,
+				5954183118BC16EC00C68386 /* Utils */,
+				5994C8A118608FD7004F8D38 /* CommonMacros */,
+				597D4F00185F558200291A6B /* SuperClass */,
+				597D4EED185F400700291A6B /* Model */,
+				5929785D1854D4B800DEC997 /* ping.caf */,
+				5929783A1854C2BE00DEC997 /* HAAppDelegate.h */,
+				5929783B1854C2BE00DEC997 /* HAAppDelegate.m */,
+				599AECF118561BF500FE2D79 /* HANotificationListViewController.h */,
+				599AECF218561BF500FE2D79 /* HANotificationListViewController.m */,
+				599AECF318561BF500FE2D79 /* HANotificationListViewController.xib */,
+				5929783D1854C2BE00DEC997 /* Images.xcassets */,
+				592978321854C2BE00DEC997 /* Supporting Files */,
+			);
+			path = "Holiday&Alarm";
+			sourceTree = "<group>";
+		};
+		592978321854C2BE00DEC997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				592978331854C2BE00DEC997 /* Holiday&Alarm-Info.plist */,
+				592978341854C2BE00DEC997 /* InfoPlist.strings */,
+				592978371854C2BE00DEC997 /* main.m */,
+				592978391854C2BE00DEC997 /* Holiday&Alarm-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5929784A1854C2BE00DEC997 /* Holiday&AlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */,
+				5929784B1854C2BE00DEC997 /* Supporting Files */,
+			);
+			path = "Holiday&AlarmTests";
+			sourceTree = "<group>";
+		};
+		5929784B1854C2BE00DEC997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5929784C1854C2BE00DEC997 /* Holiday&AlarmTests-Info.plist */,
+				5929784D1854C2BE00DEC997 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5954183118BC16EC00C68386 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5954183218BC170C00C68386 /* DateUtils.h */,
+				5954183318BC170C00C68386 /* DateUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		597D4EED185F400700291A6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6A21AC218BF515E003EB3E7 /* DB */,
+				597D4EEE185F404600291A6B /* HASituation.h */,
+				597D4EEF185F404600291A6B /* HASituation.m */,
+				597D4EF1185F42ED00291A6B /* HAAlarm.h */,
+				597D4EF2185F42ED00291A6B /* HAAlarm.m */,
+				597D4EF4185F440600291A6B /* HADayObject.h */,
+				597D4EF5185F440600291A6B /* HADayObject.m */,
+				597D4EF7185F51E800291A6B /* HAAlarmScheduler.h */,
+				597D4EF8185F51E800291A6B /* HAAlarmScheduler.m */,
+				597D4EFA185F534100291A6B /* HACalendarManager.h */,
+				597D4EFB185F534100291A6B /* HACalendarManager.m */,
+				597D4EFD185F54B600291A6B /* HASituationManager.h */,
+				597D4EFE185F54B600291A6B /* HASituationManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		597D4F00185F558200291A6B /* SuperClass */ = {
+			isa = PBXGroup;
+			children = (
+				597D4F01185F55A400291A6B /* HASaveAndLoadClass.h */,
+				597D4F02185F55A400291A6B /* HASaveAndLoadClass.m */,
+			);
+			name = SuperClass;
+			sourceTree = "<group>";
+		};
+		5994C8A118608FD7004F8D38 /* CommonMacros */ = {
+			isa = PBXGroup;
+			children = (
+				5994C8A218608FF6004F8D38 /* HACommonMacros.h */,
+			);
+			name = CommonMacros;
+			sourceTree = "<group>";
+		};
+		59DE1B6C18BCE1F8006508E0 /* OpenResource */ = {
+			isa = PBXGroup;
+			children = (
+				D6A21AA418BF3D85003EB3E7 /* src */,
+				59DE1B6D18BCE216006508E0 /* Calendar */,
+			);
+			name = OpenResource;
+			sourceTree = "<group>";
+		};
+		59DE1B6D18BCE216006508E0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				59DE1B6E18BCE216006508E0 /* Calendar-Prefix.pch */,
+				59DE1B6F18BCE216006508E0 /* CXCalendarCellView.h */,
+				59DE1B7018BCE216006508E0 /* CXCalendarCellView.m */,
+				59DE1B7118BCE216006508E0 /* CXCalendarView.h */,
+				59DE1B7218BCE216006508E0 /* CXCalendarView.m */,
+				59DE1B7318BCE216006508E0 /* CXMultidateCalendarView.h */,
+				59DE1B7418BCE216006508E0 /* CXMultidateCalendarView.m */,
+				59DE1B7518BCE216006508E0 /* UIButton+CXCalendar.h */,
+				59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */,
+				59DE1B7718BCE216006508E0 /* UIColor+CXCalendar.h */,
+				59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */,
+				59DE1B7918BCE216006508E0 /* UILabel+CXCalendar.h */,
+				59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		D6A21AA418BF3D85003EB3E7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D6A21AA518BF3D85003EB3E7 /* FMDatabase.h */,
+				D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */,
+				D6A21AA718BF3D85003EB3E7 /* FMDatabaseAdditions.h */,
+				D6A21AA818BF3D85003EB3E7 /* FMDatabaseAdditions.m */,
+				D6A21AA918BF3D85003EB3E7 /* FMDatabasePool.h */,
+				D6A21AAA18BF3D85003EB3E7 /* FMDatabasePool.m */,
+				D6A21AAB18BF3D85003EB3E7 /* FMDatabaseQueue.h */,
+				D6A21AAC18BF3D85003EB3E7 /* FMDatabaseQueue.m */,
+				D6A21AAE18BF3D85003EB3E7 /* FMResultSet.h */,
+				D6A21AAF18BF3D85003EB3E7 /* FMResultSet.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D6A21AC218BF515E003EB3E7 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				D6A21ABE18BF5155003EB3E7 /* HADBAccessClass.h */,
+				D6A21ABF18BF5155003EB3E7 /* HADBAccessClass.m */,
+				D6A21AC718C03C0F003EB3E7 /* HADBAccessClassHelper.h */,
+				D6A21AC818C03C0F003EB3E7 /* HADBAccessClassHelper.m */,
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592978271854C2BE00DEC997 /* Holiday&Alarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592978541854C2BE00DEC997 /* Build configuration list for PBXNativeTarget "Holiday&Alarm" */;
+			buildPhases = (
+				592978241854C2BE00DEC997 /* Sources */,
+				592978251854C2BE00DEC997 /* Frameworks */,
+				592978261854C2BE00DEC997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Holiday&Alarm";
+			productName = "Holiday&Alarm";
+			productReference = 592978281854C2BE00DEC997 /* Holiday&Alarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		592978421854C2BE00DEC997 /* Holiday&AlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592978571854C2BE00DEC997 /* Build configuration list for PBXNativeTarget "Holiday&AlarmTests" */;
+			buildPhases = (
+				5929783F1854C2BE00DEC997 /* Sources */,
+				592978401854C2BE00DEC997 /* Frameworks */,
+				592978411854C2BE00DEC997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				592978491854C2BE00DEC997 /* PBXTargetDependency */,
+			);
+			name = "Holiday&AlarmTests";
+			productName = "Holiday&AlarmTests";
+			productReference = 592978431854C2BE00DEC997 /* Holiday&AlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		592978201854C2BE00DEC997 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HA;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Chaos Lin";
+				TargetAttributes = {
+					592978421854C2BE00DEC997 = {
+						TestTargetID = 592978271854C2BE00DEC997;
+					};
+				};
+			};
+			buildConfigurationList = 592978231854C2BE00DEC997 /* Build configuration list for PBXProject "Holiday&Alarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5929781F1854C2BE00DEC997;
+			productRefGroup = 592978291854C2BE00DEC997 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				592978271854C2BE00DEC997 /* Holiday&Alarm */,
+				592978421854C2BE00DEC997 /* Holiday&AlarmTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592978261854C2BE00DEC997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592978361854C2BE00DEC997 /* InfoPlist.strings in Resources */,
+				599AECF518561BF500FE2D79 /* HANotificationListViewController.xib in Resources */,
+				5929783E1854C2BE00DEC997 /* Images.xcassets in Resources */,
+				5929785E1854D4B800DEC997 /* ping.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592978411854C2BE00DEC997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5929784F1854C2BE00DEC997 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592978241854C2BE00DEC997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				597D4EF6185F440600291A6B /* HADayObject.m in Sources */,
+				59DE1B8018BCE216006508E0 /* UILabel+CXCalendar.m in Sources */,
+				597D4EF9185F51E800291A6B /* HAAlarmScheduler.m in Sources */,
+				D6A21AB018BF3D85003EB3E7 /* FMDatabase.m in Sources */,
+				59DE1B7E18BCE216006508E0 /* UIButton+CXCalendar.m in Sources */,
+				59DE1B7C18BCE216006508E0 /* CXCalendarView.m in Sources */,
+				597D4F03185F55A400291A6B /* HASaveAndLoadClass.m in Sources */,
+				592978381854C2BE00DEC997 /* main.m in Sources */,
+				597D4EF0185F404600291A6B /* HASituation.m in Sources */,
+				5954183418BC170C00C68386 /* DateUtils.m in Sources */,
+				5929783C1854C2BE00DEC997 /* HAAppDelegate.m in Sources */,
+				599AECF418561BF500FE2D79 /* HANotificationListViewController.m in Sources */,
+				597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */,
+				597D4EFF185F54B600291A6B /* HASituationManager.m in Sources */,
+				59DE1B7F18BCE216006508E0 /* UIColor+CXCalendar.m in Sources */,
+				D6A21AB218BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */,
+				D6A21ABA18BF3D85003EB3E7 /* FMResultSet.m in Sources */,
+				D6A21AC918C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */,
+				59DE1B7D18BCE216006508E0 /* CXMultidateCalendarView.m in Sources */,
+				D6A21AB618BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */,
+				D6A21AB418BF3D85003EB3E7 /* FMDatabasePool.m in Sources */,
+				597D4EFC185F534100291A6B /* HACalendarManager.m in Sources */,
+				D6A21AC018BF5155003EB3E7 /* HADBAccessClass.m in Sources */,
+				59DE1B7B18BCE216006508E0 /* CXCalendarCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5929783F1854C2BE00DEC997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6A21AB718BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */,
+				D6A21ACA18C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */,
+				592978511854C2BE00DEC997 /* Holiday_AlarmTests.m in Sources */,
+				D6A21ABB18BF3D85003EB3E7 /* FMResultSet.m in Sources */,
+				D6A21AB518BF3D85003EB3E7 /* FMDatabasePool.m in Sources */,
+				D6A21AB118BF3D85003EB3E7 /* FMDatabase.m in Sources */,
+				D6A21AB318BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */,
+				D6A21AC118BF5155003EB3E7 /* HADBAccessClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		592978491854C2BE00DEC997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592978271854C2BE00DEC997 /* Holiday&Alarm */;
+			targetProxy = 592978481854C2BE00DEC997 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		592978341854C2BE00DEC997 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592978351854C2BE00DEC997 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5929784D1854C2BE00DEC997 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5929784E1854C2BE00DEC997 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		592978521854C2BE00DEC997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		592978531854C2BE00DEC997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		592978551854C2BE00DEC997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Holiday&Alarm/Holiday&Alarm-Prefix.pch";
+				INFOPLIST_FILE = "Holiday&Alarm/Holiday&Alarm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C1F7E84D-1989-4DDC-B0AD-709D4A8860C9";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		592978561854C2BE00DEC997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Holiday&Alarm/Holiday&Alarm-Prefix.pch";
+				INFOPLIST_FILE = "Holiday&Alarm/Holiday&Alarm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C1F7E84D-1989-4DDC-B0AD-709D4A8860C9";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		592978581854C2BE00DEC997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Holiday&Alarm.app/Holiday&Alarm";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Holiday&Alarm/Holiday&Alarm-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Holiday&AlarmTests/Holiday&AlarmTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		592978591854C2BE00DEC997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Holiday&Alarm.app/Holiday&Alarm";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Holiday&Alarm/Holiday&Alarm-Prefix.pch";
+				INFOPLIST_FILE = "Holiday&AlarmTests/Holiday&AlarmTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		592978231854C2BE00DEC997 /* Build configuration list for PBXProject "Holiday&Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592978521854C2BE00DEC997 /* Debug */,
+				592978531854C2BE00DEC997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592978541854C2BE00DEC997 /* Build configuration list for PBXNativeTarget "Holiday&Alarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592978551854C2BE00DEC997 /* Debug */,
+				592978561854C2BE00DEC997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592978571854C2BE00DEC997 /* Build configuration list for PBXNativeTarget "Holiday&AlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592978581854C2BE00DEC997 /* Debug */,
+				592978591854C2BE00DEC997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 592978201854C2BE00DEC997 /* Project object */;
+}
