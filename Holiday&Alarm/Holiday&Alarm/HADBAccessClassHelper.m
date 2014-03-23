@@ -26,8 +26,8 @@
     {
         [self setDataBaseFullPath:DataBaseFullPath];
         //init Database tables;
-        BOOL flag_initDB = [self initDataBaseTables];
-        if (!flag_initDB)
+        BOOL succ_initDB = [self initDataBaseTables];
+        if (!succ_initDB)
         {
             NSAssert(0, @"Init DB failed");
         }

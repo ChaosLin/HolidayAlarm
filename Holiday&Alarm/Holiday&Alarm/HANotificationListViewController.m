@@ -134,7 +134,7 @@
 //    [self.view addSubview:button_switch];
 //    [button_switch addTarget:self action:@selector(switchButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
-    HADBAccessClassHelper* helper = [HADBAccessClassHelper sharedInstance];
+//    HADBAccessClassHelper* helper = [HADBAccessClassHelper sharedInstance];
 //    [helper updateMessage:@"delete from calendar"];
 //    NSLog(@"%@", [[helper queryCalendarDB] description]);
 //    [helper addSituationID:1 forDayId:2];
@@ -162,7 +162,7 @@
 //    NSLog(@"%@", [helper queryAlarmDB]);
     
     
-    [HADBAccessClassHelper destroy];
+//    [HADBAccessClassHelper destroy];
 }
 
 - (IBAction)switchButtonClicked:(id)sender
