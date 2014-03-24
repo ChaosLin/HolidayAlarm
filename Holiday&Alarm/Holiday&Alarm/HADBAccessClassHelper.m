@@ -11,7 +11,7 @@
 #import "HASituation.h"
 #import "HAAlarm.h"
 
-#define DataBaseName @"HA.db"
+#define DataBaseName @"ha.sqlite"
 #define DataBaseFullPath [NSTemporaryDirectory() stringByAppendingPathComponent:DataBaseName]
 
 @interface HADBAccessClassHelper()
@@ -45,7 +45,7 @@
     return result;
 }
 
-- (NSArray*)querySituationDB
+- (HADBQueryResult*)querySituationDB
 {
     return [self queryMessage:@"select * from situation"];
 }
@@ -65,7 +65,7 @@
 }
 
 #pragma mark - Alarm;
-- (NSArray*)queryAlarmDB
+- (HADBQueryResult*)queryAlarmDB
 {
     return [self queryMessage:@"select * from alarm"];
 }
@@ -83,7 +83,7 @@
 }
 
 #pragma mark - Calendar
-- (NSArray*)queryCalendarDB
+- (HADBQueryResult*)queryCalendarDB
 {
     return [self queryMessage:@"select * from calendar"];
 }

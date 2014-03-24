@@ -36,6 +36,7 @@
 		59DE1B7E18BCE216006508E0 /* UIButton+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		59DE1B7F18BCE216006508E0 /* UIColor+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		59DE1B8018BCE216006508E0 /* UILabel+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59E5CBB818E0763B0006C28A /* HADBQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E5CBB718E0763B0006C28A /* HADBQueryResult.m */; };
 		D6A21AB018BF3D85003EB3E7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */; };
 		D6A21AB118BF3D85003EB3E7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */; };
 		D6A21AB218BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA818BF3D85003EB3E7 /* FMDatabaseAdditions.m */; };
@@ -114,6 +115,8 @@
 		59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CXCalendar.m"; sourceTree = "<group>"; };
 		59DE1B7918BCE216006508E0 /* UILabel+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CXCalendar.h"; sourceTree = "<group>"; };
 		59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CXCalendar.m"; sourceTree = "<group>"; };
+		59E5CBB618E0763B0006C28A /* HADBQueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADBQueryResult.h; sourceTree = "<group>"; };
+		59E5CBB718E0763B0006C28A /* HADBQueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADBQueryResult.m; sourceTree = "<group>"; };
 		D6A21AA518BF3D85003EB3E7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		D6A21AA718BF3D85003EB3E7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				D6A21ABF18BF5155003EB3E7 /* HADBAccessClass.m */,
 				D6A21AC718C03C0F003EB3E7 /* HADBAccessClassHelper.h */,
 				D6A21AC818C03C0F003EB3E7 /* HADBAccessClassHelper.m */,
+				59E5CBB618E0763B0006C28A /* HADBQueryResult.h */,
+				59E5CBB718E0763B0006C28A /* HADBQueryResult.m */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -384,7 +389,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HA;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Chaos Lin";
 				TargetAttributes = {
 					592978421854C2BE00DEC997 = {
@@ -452,6 +457,7 @@
 				597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */,
 				597D4EFF185F54B600291A6B /* HASituationManager.m in Sources */,
 				59DE1B7F18BCE216006508E0 /* UIColor+CXCalendar.m in Sources */,
+				59E5CBB818E0763B0006C28A /* HADBQueryResult.m in Sources */,
 				D6A21AB218BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */,
 				D6A21ABA18BF3D85003EB3E7 /* FMResultSet.m in Sources */,
 				D6A21AC918C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */,
@@ -513,7 +519,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -552,7 +557,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -612,7 +616,6 @@
 		592978581854C2BE00DEC997 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Holiday&Alarm.app/Holiday&Alarm";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -635,7 +638,6 @@
 		592978591854C2BE00DEC997 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Holiday&Alarm.app/Holiday&Alarm";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

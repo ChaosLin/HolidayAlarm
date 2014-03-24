@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class HADBQueryResult;
 @interface HADBAccessClass : NSObject
 
 + (instancetype)sharedInstance;
@@ -15,7 +15,7 @@
 
 - (BOOL)setDataBaseFullPath:(NSString*)path;
 
-- (NSArray*)queryMessage:(NSString*)message,...;
+- (HADBQueryResult*)queryMessage:(NSString*)message,...;
 
 - (BOOL)updateMessage:(NSString*)message,...;
 

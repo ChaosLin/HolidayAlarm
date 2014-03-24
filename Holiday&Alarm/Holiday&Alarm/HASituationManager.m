@@ -137,11 +137,13 @@
 - (BOOL)load
 {
     id dataTemp = nil;
-    BOOL result = [self unarchieveFromFileToData:&dataTemp];
+//    BOOL result = [self unarchieveFromFileToData:&dataTemp];
+    BOOL result = YES;
     if (result && [dataTemp isKindOfClass:[NSArray class]])
     {
         self.arr_situations = [NSMutableArray arrayWithArray:dataTemp];
     }
+#warning 这里的初始化感觉有问题
     if (!self.arr_situations || 0 == self.arr_situations.count)
     {
         self.arr_situations = [NSMutableArray array];
@@ -173,6 +175,7 @@
 
 - (BOOL)save
 {
-    return [self archieveToFileWithData:self.arr_situations];
+    return YES;
+//    return [self archieveToFileWithData:self.arr_situations];
 }
 @end

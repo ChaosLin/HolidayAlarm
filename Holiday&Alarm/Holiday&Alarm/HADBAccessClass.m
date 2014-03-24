@@ -9,6 +9,7 @@
 #import "HADBAccessClass.h"
 #import "FMDatabaseQueue.h"
 #import "FMDatabase.h"
+#import "HADBQueryResult.h"
 
 @interface HADBAccessClass()
 @property (nonatomic, strong) FMDatabaseQueue* queue;
@@ -46,10 +47,11 @@ static HADBAccessClass* global_DBO = nil;
     return self.queue?YES:NO;
 }
 
-- (NSArray*)queryMessage:(NSString*)message,...
+- (HADBQueryResult*)queryMessage:(NSString*)message,...
 {
+    __block HADBQueryResult* result;
     NSAssert(self.queue, @"You should provide a valid dataBasePath");
-    NSMutableArray* arr_result = [NSMutableArray arrayWithCapacity:10];
+    NSMutableArray* arr_result = [NSMutableArray arrayWithCapacity:100];
     va_list args;
     va_start(args, message);
     [self.queue inDatabase:^(FMDatabase *db) {
@@ -60,6 +62,9 @@ static HADBAccessClass* global_DBO = nil;
             NSLog(@"%@ failed\nerror: %@", message, [db lastErrorMessage]);
         }
 #endif
+        BOOL flag_succ = set_result?YES:NO;
+        result = [[HADBQueryResult alloc]initWithQueryState:flag_succ];
+        
         while ([set_result next]) {
             NSDictionary* dic_row = [set_result resultDictionary];
             if (dic_row)
@@ -69,7 +74,8 @@ static HADBAccessClass* global_DBO = nil;
         }
     }];
     va_end(args);
-    return arr_result;
+    result.dataArray = arr_result;
+    return result;
 }
 
 - (BOOL)updateMessage:(NSString*)message,...

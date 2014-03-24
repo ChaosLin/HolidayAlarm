@@ -11,6 +11,8 @@
 #import "HAAlarmScheduler.h"
 #import "HADayObject.h"
 #import "DateUtils.h"
+#import "HADBAccessClassHelper.h"
+#import "HADBQueryResult.h"
 
 #define fileName_calendarManager @"Calendar.plist"
 
@@ -84,17 +86,28 @@
 #pragma mark - SuperClass
 - (BOOL)load
 {
-    id dataTemp = nil;
-    BOOL result = [self unarchieveFromFileToData:&dataTemp];
-    if (result && [dataTemp isKindOfClass:[NSDictionary class]])
+    BOOL result = YES;
+    self.dic_dayId2situationId = [NSMutableDictionary dictionary];
+    HADBAccessClassHelper* dbHelper = [HADBAccessClassHelper sharedInstance];
+    HADBQueryResult* result_query = [dbHelper queryCalendarDB];
+    if (result_query.isQuerySucc)
     {
-        self.dic_dayId2situationId = [NSMutableDictionary dictionaryWithDictionary:dataTemp];
+        for (NSDictionary* dic_info in result_query.dataArray)
+        {
+            id id_sid = [dic_info valueForKey:@"sid"];
+            id id_dayid = [dic_info valueForKey:@"dayid"];
+            if (id_sid && id_dayid)
+            {
+                [self.dic_dayId2situationId setValue:id_sid forKey:[NSString stringWithFormat:@"%@", id_dayid]];
+            }
+        }
     }
+    result = result_query.isQuerySucc;
     return result;
 }
 
 - (BOOL)save
 {
-    return [self archieveToFileWithData:self.dic_dayId2situationId];
+    return YES;//[self archieveToFileWithData:self.dic_dayId2situationId];
 }
 @end

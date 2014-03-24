@@ -10,19 +10,20 @@
 @class HASituation;
 @class HACalendarManager;
 @class HAAlarm;
+@class HADBQueryResult;
 @interface HADBAccessClassHelper : HADBAccessClass
 
-- (NSArray*)querySituationDB;
+- (HADBQueryResult*)querySituationDB;
 - (BOOL)addSituation:(HASituation*)situation;
 - (BOOL)deleteSituation:(HASituation*)situation;
 - (BOOL)updateSituation:(HASituation*)situation;
 
-- (NSArray*)queryAlarmDB;
+- (HADBQueryResult*)queryAlarmDB;
 - (BOOL)addAlarm:(HAAlarm*)alarm;
 - (BOOL)deleteAlarm:(HAAlarm*)alarm;
 - (BOOL)updateAlarm:(HAAlarm*)alarm;
 
-- (NSArray*)queryCalendarDB;
+- (HADBQueryResult*)queryCalendarDB;
 - (BOOL)addSituationID:(NSInteger)sid forDayId:(NSInteger)dayId;
 - (BOOL)deleteDayId:(NSInteger)dayId;
 - (BOOL)updateDayId:(NSInteger)dayId withSituationId:(NSInteger)sid;

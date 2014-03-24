@@ -15,6 +15,7 @@
 #import "CXCalendarView.h"
 #import "DateUtils.h"
 #import "HADBAccessClassHelper.h"
+#import "HADBQueryResult.h"
 
 @interface HANotificationListViewController () <CXCalendarViewDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) UITableView* tableView_notifications;
@@ -113,32 +114,32 @@
 //
     
     
-//    [[HACalendarManager sharedInstance] scheduleNextTenDays];
-//    
-//    [self.tableView_notifications reloadData];
-//    
-//    self.calendarView = [[CXCalendarView alloc]init];
-//    self.calendarView.frame = self.view.bounds;
-//    self.calendarView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-//    self.calendarView.backgroundColor = [UIColor redColor];
-//    self.calendarView.calendar = [NSCalendar currentCalendar];
-//    [self.view addSubview:self.calendarView];
-//    self.calendarView.delegate = self;
-//    self.calendarView.selectedDate = [NSDate date];
-//    
-//    UIButton* button_switch = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button_switch setBackgroundColor:[UIColor greenColor]];
-//    float width = 50;
-//    float height = 50;
-//    button_switch.frame = CGRectMake(self.view.bounds.size.width - width, 0, width, height);
-//    [self.view addSubview:button_switch];
-//    [button_switch addTarget:self action:@selector(switchButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [[HACalendarManager sharedInstance] scheduleNextTenDays];
     
-//    HADBAccessClassHelper* helper = [HADBAccessClassHelper sharedInstance];
+    [self.tableView_notifications reloadData];
+    
+    self.calendarView = [[CXCalendarView alloc]init];
+    self.calendarView.frame = self.view.bounds;
+    self.calendarView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.calendarView.backgroundColor = [UIColor redColor];
+    self.calendarView.calendar = [NSCalendar currentCalendar];
+    [self.view addSubview:self.calendarView];
+    self.calendarView.delegate = self;
+    self.calendarView.selectedDate = [NSDate date];
+    
+    UIButton* button_switch = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button_switch setBackgroundColor:[UIColor greenColor]];
+    float width = 50;
+    float height = 50;
+    button_switch.frame = CGRectMake(self.view.bounds.size.width - width, 0, width, height);
+    [self.view addSubview:button_switch];
+    [button_switch addTarget:self action:@selector(switchButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    HADBAccessClassHelper* helper = [HADBAccessClassHelper sharedInstance];
 //    [helper updateMessage:@"delete from calendar"];
 //    NSLog(@"%@", [[helper queryCalendarDB] description]);
 //    [helper addSituationID:1 forDayId:2];
-//    NSLog(@"%@", [[helper queryCalendarDB] description]);
+    NSLog(@"%@", [[helper queryCalendarDB] description]);
 //    [helper updateDayId:2 withSituationId:2];
 //    NSLog(@"%@", [[helper queryCalendarDB] description]);
 //    [helper deleteDayId:2];

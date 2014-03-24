@@ -11,8 +11,8 @@
 @interface HASaveAndLoadClass : NSObject
 
 @property (nonatomic, strong) NSString* str_filePath;
-- (BOOL)archieveToFileWithData:(id)data;
-- (BOOL)unarchieveFromFileToData:(id*)data;
+//- (BOOL)archieveToFileWithData:(id)data;
+//- (BOOL)unarchieveFromFileToData:(id*)data;
 
 - (BOOL)load;
 - (BOOL)save;
