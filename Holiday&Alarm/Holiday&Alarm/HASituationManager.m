@@ -10,6 +10,8 @@
 #import "HASituation.h"
 #import "HAAlarm.h"
 #import "HAAlarmScheduler.h"
+#import "HADBQueryResult.h"
+#import "HADBAccessClassHelper.h"
 #define fileName_situationManager @"SituationManager.plist"
 
 @interface HASituationManager()
@@ -24,7 +26,8 @@
     dispatch_once(&onceToken, ^{
         situationManager = [[HASituationManager alloc]init];
         situationManager.str_filePath = fileName_situationManager;
-        [situationManager load];
+        BOOL result = [situationManager load];
+        NSAssert(result, nil);
     });
     return situationManager;
 }
@@ -136,12 +139,15 @@
 #pragma mark - superClass
 - (BOOL)load
 {
-    id dataTemp = nil;
-//    BOOL result = [self unarchieveFromFileToData:&dataTemp];
-    BOOL result = YES;
-    if (result && [dataTemp isKindOfClass:[NSArray class]])
+    HADBQueryResult* result_situation= [[HADBAccessClassHelper sharedInstance] querySituationDB];
+    HADBQueryResult* result_alarms = [[HADBAccessClassHelper sharedInstance] queryAlarmDB];
+    //
+    BOOL result = result_situation.isQuerySucc && result_situation.isQuerySucc;
+    if (result)
     {
-        self.arr_situations = [NSMutableArray arrayWithArray:dataTemp];
+        //得到alarms
+        //得到situations
+        //根据alarm的sid把alarm放进对应的situation里面
     }
 #warning 这里的初始化感觉有问题
     if (!self.arr_situations || 0 == self.arr_situations.count)
