@@ -72,6 +72,7 @@ static HADBAccessClass* global_DBO = nil;
                 [arr_result addObject:dic_row];
             }
         }
+        [set_result close];
     }];
     va_end(args);
     result.dataArray = arr_result;
