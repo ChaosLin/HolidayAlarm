@@ -146,8 +146,64 @@
     if (result)
     {
         //得到alarms
+        NSArray* arr_alarms_raw = result_alarms.dataArray;
+        NSMutableArray* arr_alarms_parsed = [NSMutableArray arrayWithCapacity:100];
+        for (NSDictionary* info in arr_alarms_raw)
+        {
+            HAAlarm* alarm = [HAAlarm parseFromDictionary:info];
+            if (alarm)
+            {
+                [arr_alarms_parsed addObject:alarm];
+            }
+            NSAssert(0 != alarm.alarmId, nil);
+        }
+        
         //得到situations
+        NSArray* arr_situations_raw = result_situation.dataArray;
+        NSMutableArray* arr_situations_parsed = [NSMutableArray arrayWithCapacity:10];
+        for (NSDictionary* info in arr_situations_raw)
+        {
+            HASituation* situation = [[HASituation alloc]init];
+            situation.id_situation = [[info valueForKey:@"id"] integerValue];
+            situation.str_name = [info valueForKey:@"description"];
+            [arr_situations_parsed addObject:situation];
+        }
+        
         //根据alarm的sid把alarm放进对应的situation里面
+        //分组
+        NSMutableDictionary* dic_sid2arr = [NSMutableDictionary dictionaryWithCapacity:10];
+        for (HAAlarm* alarm in arr_alarms_parsed)
+        {
+            NSInteger sid = alarm.situationId;
+            NSMutableArray* arr_alarms = [dic_sid2arr valueForKey:[NSString stringWithFormat:@"%d", sid]];
+            if (!arr_alarms)
+            {
+                arr_alarms = [NSMutableArray arrayWithCapacity:10];
+                [dic_sid2arr setValue:arr_alarms forKey:[NSString stringWithFormat:@"%d", sid]];
+            }
+            [arr_alarms addObject:alarm];
+        }
+        //更新进对应的situation
+        NSMutableArray* arr_keys = [NSMutableArray arrayWithArray:[dic_sid2arr allKeys]];
+        for (HASituation* situation in arr_situations_parsed)
+        {
+            NSInteger sid = situation.id_situation;
+            NSArray* arr_alarms = [dic_sid2arr valueForKey:[NSString stringWithFormat:@"%d", sid]];
+            if (arr_alarms)
+            {
+                [situation updateWithAlarms:arr_alarms];
+            }
+            else
+            {
+                [situation updateWithAlarms:[NSMutableArray array]];
+            }
+            [arr_keys removeObject:[NSString stringWithFormat:@"%d", sid]];
+        }
+        if (0 != arr_keys.count)
+        {
+            NSAssert(0, @"有sid不存在的alarms存在");
+        }
+        self.arr_situations = arr_situations_parsed;
     }
 #warning 这里的初始化感觉有问题
     if (!self.arr_situations || 0 == self.arr_situations.count)
@@ -161,6 +217,8 @@
         alarm.str_name = @"起床";
         alarm.hour = 7;
         alarm.minitue = 1;
+        alarm.str_title = @"Hy";
+        alarm.alarmId = 1;
         [newSituation updateWithAlarms:[NSArray arrayWithObject:alarm]];
         
         HASituation* situation_holiday = [[HASituation alloc]init];
@@ -171,6 +229,8 @@
         alarm_holiday.str_name = @"起床";
         alarm_holiday.hour = 8;
         alarm_holiday.minitue = 20;
+        alarm_holiday.str_title = @"Hy";
+        alarm_holiday.alarmId = 2;
         [situation_holiday updateWithAlarms:[NSArray arrayWithObject:alarm_holiday]];
         
         [self.arr_situations addObject:newSituation];

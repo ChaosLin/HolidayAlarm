@@ -71,4 +71,9 @@
     }
     return isAlarmsValid;
 }
+
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"%@ id:%d name:%@ alarms:%@", [self class], self.id_situation, self.str_name, self.arr_alarms];
+}
 @end

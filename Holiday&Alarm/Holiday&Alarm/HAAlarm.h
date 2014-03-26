@@ -14,7 +14,9 @@
 @property (nonatomic, strong) NSString* str_name;//描述，比如起床闹铃
 @property (nonatomic, assign) NSInteger hour;//[0~23]
 @property (nonatomic, assign) NSInteger minitue;//[0~59]
-@property (nonatomic, strong) NSString* str_alarm;//notification的时候的文字
 @property (nonatomic, strong) NSString* str_title;
+@property (nonatomic, strong) NSString* str_alarm;//notification的时候的文字
 @property (nonatomic, assign) NSInteger situationId;
+
++ (instancetype)parseFromDictionary:(NSDictionary*)dic_info;
 @end
