@@ -10,7 +10,7 @@
 #import "HASaveAndLoadClass.h"
 
 @class HASituation;
-
+@class HAAlarm;
 #ifndef SITUATION_WEEKDAY
 #define SITUATION_WEEKDAY 1
 #endif
@@ -27,7 +27,10 @@
 - (HASituation*)getSituationWithID:(NSInteger)situationID;
 
 - (BOOL)addSituation:(HASituation*)situation;
-- (BOOL)updateSituationWithSituation:(HASituation*)situation toSituationId:(NSInteger)situationID;
-
-- (BOOL)setSituationWithID:(NSInteger)situationId withAlarams:(NSArray*)alarms;
+//暂时先不使用这两个方法，这两个方法从设计上并不是很好
+//- (BOOL)updateSituationWithSituation:(HASituation*)situation toSituationId:(NSInteger)situationID;
+//- (BOOL)setSituationWithID:(NSInteger)situationId withAlarams:(NSArray*)alarms;
+- (BOOL)addAlarm:(HAAlarm*)alarm forSituationID:(NSInteger)situationId;
+- (BOOL)deleteAlarm:(HAAlarm*)alarm forSituationID:(NSInteger)situationId;
+- (BOOL)updateALarm:(HAAlarm*)alarm forSituationID:(NSInteger)situationId;
 @end

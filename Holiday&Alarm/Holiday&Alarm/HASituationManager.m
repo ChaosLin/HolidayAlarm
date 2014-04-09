@@ -65,8 +65,10 @@
     return situation;
 }
 
+//禁用
 - (BOOL)updateSituationWithSituation:(HASituation*)situation toSituationId:(NSInteger)situationID
 {
+    NSAssert(0, nil);
     BOOL result = YES;
     if (situationID != situation.id_situation)
     {
@@ -109,6 +111,12 @@
         if (!situation_temp)
         {
             [self.arr_situations addObject:situation];
+            //update database
+            result = [[HADBAccessClassHelper sharedInstance] addSituation:situation];
+            if (!result)
+            {
+                NSAssert(0, @"failed to add situation");
+            }
         }
         else
         {
@@ -119,8 +127,10 @@
     return result;
 }
 
+//禁用
 - (BOOL)setSituationWithID:(NSInteger)situationId withAlarams:(NSArray*)alarms
 {
+    NSAssert(0, nil);
     BOOL result = YES;
     
     HASituation* situation = [self getSituationWithID:situationId];
@@ -136,7 +146,48 @@
     return result;
 }
 
-#pragma mark - superClass
+- (BOOL)addAlarm:(HAAlarm*)alarm forSituationID:(NSInteger)situationId
+{
+    HASituation* situation = [self getSituationWithID:situationId];
+    if (!situation)
+    {
+        return NO;
+    }
+    else
+    {
+        return [situation addAlarm:alarm];
+    }
+    return YES;
+}
+
+- (BOOL)deleteAlarm:(HAAlarm*)alarm forSituationID:(NSInteger)situationId
+{
+    HASituation* situation = [self getSituationWithID:situationId];
+    if (!situation)
+    {
+        return NO;
+    }
+    else
+    {
+        return [situation deleteAlarm:alarm];
+    }
+    return YES;
+}
+
+- (BOOL)updateALarm:(HAAlarm*)alarm forSituationID:(NSInteger)situationId
+{
+    HASituation* situation = [self getSituationWithID:situationId];
+    if (!situation)
+    {
+        return NO;
+    }
+    else
+    {
+        return [situation updateAlarm:alarm];
+    }
+    return YES;
+}
+#pragma mark - baseClass
 - (BOOL)load
 {
     HADBQueryResult* result_situation= [[HADBAccessClassHelper sharedInstance] querySituationDB];
@@ -205,13 +256,15 @@
         }
         self.arr_situations = arr_situations_parsed;
     }
-#warning 这里的初始化感觉有问题
+    
     if (!self.arr_situations || 0 == self.arr_situations.count)
     {
         self.arr_situations = [NSMutableArray array];
         HASituation* newSituation = [[HASituation alloc]init];
         newSituation.id_situation = SITUATION_WEEKDAY;
         newSituation.str_name = @"工作日";
+#warning 这里还得根据操作的结果进行一些逻辑判断
+        [self addSituation:newSituation];
         HAAlarm* alarm = [[HAAlarm alloc]init];
         alarm.str_alarm = @"It's a good day~ :)";
         alarm.str_name = @"起床";
@@ -219,11 +272,12 @@
         alarm.minitue = 1;
         alarm.str_title = @"Hy";
         alarm.alarmId = 1;
-        [newSituation updateWithAlarms:[NSArray arrayWithObject:alarm]];
+        [newSituation addAlarm:alarm];
         
         HASituation* situation_holiday = [[HASituation alloc]init];
         situation_holiday.id_situation = SITUATION_HOLIDAY;
         situation_holiday.str_name = @"假期";
+        [self addSituation:situation_holiday];
         HAAlarm* alarm_holiday = [[HAAlarm alloc]init];
         alarm_holiday.str_alarm = @"It's a good day~ :)";
         alarm_holiday.str_name = @"起床";
@@ -231,10 +285,7 @@
         alarm_holiday.minitue = 20;
         alarm_holiday.str_title = @"Hy";
         alarm_holiday.alarmId = 2;
-        [situation_holiday updateWithAlarms:[NSArray arrayWithObject:alarm_holiday]];
-        
-        [self.arr_situations addObject:newSituation];
-        [self.arr_situations addObject:situation_holiday];
+        [situation_holiday addAlarm:alarm_holiday];
     }
     return result;
 }

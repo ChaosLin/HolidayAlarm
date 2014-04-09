@@ -196,7 +196,7 @@
 				59DE1B6C18BCE1F8006508E0 /* OpenResource */,
 				5954183118BC16EC00C68386 /* Utils */,
 				5994C8A118608FD7004F8D38 /* CommonMacros */,
-				597D4F00185F558200291A6B /* SuperClass */,
+				597D4F00185F558200291A6B /* BaseClass */,
 				597D4EED185F400700291A6B /* Model */,
 				5929785D1854D4B800DEC997 /* ping.caf */,
 				5929783A1854C2BE00DEC997 /* HAAppDelegate.h */,
@@ -268,13 +268,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		597D4F00185F558200291A6B /* SuperClass */ = {
+		597D4F00185F558200291A6B /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
 				597D4F01185F55A400291A6B /* HASaveAndLoadClass.h */,
 				597D4F02185F55A400291A6B /* HASaveAndLoadClass.m */,
 			);
-			name = SuperClass;
+			name = BaseClass;
 			sourceTree = "<group>";
 		};
 		5994C8A118608FD7004F8D38 /* CommonMacros */ = {
@@ -288,7 +288,7 @@
 		59DE1B6C18BCE1F8006508E0 /* OpenResource */ = {
 			isa = PBXGroup;
 			children = (
-				D6A21AA418BF3D85003EB3E7 /* src */,
+				D6A21AA418BF3D85003EB3E7 /* FMDB */,
 				59DE1B6D18BCE216006508E0 /* Calendar */,
 			);
 			name = OpenResource;
@@ -314,7 +314,7 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		D6A21AA418BF3D85003EB3E7 /* src */ = {
+		D6A21AA418BF3D85003EB3E7 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
 				D6A21AA518BF3D85003EB3E7 /* FMDatabase.h */,
@@ -328,6 +328,7 @@
 				D6A21AAE18BF3D85003EB3E7 /* FMResultSet.h */,
 				D6A21AAF18BF3D85003EB3E7 /* FMResultSet.m */,
 			);
+			name = FMDB;
 			path = src;
 			sourceTree = "<group>";
 		};

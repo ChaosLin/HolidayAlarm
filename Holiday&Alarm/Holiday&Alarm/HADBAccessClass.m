@@ -59,7 +59,7 @@ static HADBAccessClass* global_DBO = nil;
 #ifdef DEBUG
         if (!set_result)
         {
-            NSLog(@"%@ failed\nerror: %@", message, [db lastErrorMessage]);
+            DLog(@"%@ failed\nerror: %@", message, [db lastErrorMessage]);
         }
 #endif
         BOOL flag_succ = set_result?YES:NO;
@@ -90,7 +90,7 @@ static HADBAccessClass* global_DBO = nil;
 #ifdef DEBUG
         if (!result)
         {
-            NSLog(@"%@ failed\nerror: %@", message, [db lastErrorMessage]);
+            DLog(@"%@ failed\nerror: %@", message, [db lastErrorMessage]);
         }
 #endif
     }];

@@ -14,10 +14,16 @@
 #define SITUATION_HOLIDAY 2
 #endif
 
+@class HAAlarm;
+
 @interface HASituation : NSObject<NSCoding>
 @property (nonatomic, assign) NSInteger id_situation;
 @property (nonatomic, strong) NSString* str_name;
 @property (nonatomic, readonly) NSArray* arr_alarms;
 
 - (BOOL)updateWithAlarms:(NSArray*)alarms;
+
+- (BOOL)addAlarm:(HAAlarm*)alarm;
+- (BOOL)deleteAlarm:(HAAlarm*)alarm;
+- (BOOL)updateAlarm:(HAAlarm*)alarm;
 @end

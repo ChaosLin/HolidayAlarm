@@ -64,19 +64,19 @@
         if (situationId)
         {
             [[HAAlarmScheduler sharedInstance] schedulAlarmWithDateID:dateId_new situationId:situationId];
-            NSLog(@"schedule %ld with situation %ld", (long)dateId_new, (long)situationId);
+            DLog(@"schedule %ld with situation %ld", (long)dateId_new, (long)situationId);
         }
         else
         {
             if (1 <= weekday && weekday <= 5)
             {
                 [[HAAlarmScheduler sharedInstance] schedulAlarmWithDateID:dateId_new situationId:SITUATION_WEEKDAY];
-                NSLog(@"schedule %ld with situation %d", (long)dateId_new, SITUATION_WEEKDAY);
+                DLog(@"schedule %ld with situation %d", (long)dateId_new, SITUATION_WEEKDAY);
             }
             else
             {
                 [[HAAlarmScheduler sharedInstance] schedulAlarmWithDateID:dateId_new situationId:SITUATION_HOLIDAY];
-                NSLog(@"schedule %ld with situation %d", (long)dateId_new, SITUATION_HOLIDAY);
+                DLog(@"schedule %ld with situation %d", (long)dateId_new, SITUATION_HOLIDAY);
             }
         }
     }

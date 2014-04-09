@@ -160,8 +160,10 @@
 //    [helper updateAlarm:alarm];
 //    NSLog(@"%@", [helper queryAlarmDB]);
 //    [helper deleteAlarm:alarm];
-//    NSLog(@"%@", [helper queryAlarmDB]);
+    NSLog(@"%@", [helper queryAlarmDB]);
     
+    [[HACalendarManager sharedInstance] scheduleNextTenDays];
+    [self.tableView_notifications reloadData];
     
 //    [HADBAccessClassHelper destroy];
 }
