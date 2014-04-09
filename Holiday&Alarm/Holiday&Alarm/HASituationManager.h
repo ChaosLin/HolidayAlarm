@@ -20,7 +20,7 @@
 
 @interface HASituationManager : HASaveAndLoadClass
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 
 - (HASituation*)getWeekDaySituation;
 - (HASituation*)getCommonHolidaySituation;

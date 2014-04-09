@@ -25,7 +25,7 @@
 
 @implementation HAAlarmScheduler
 
-+ (id)sharedInstance
++ (instancetype)sharedInstance
 {
     static HAAlarmScheduler* alarmScheduler = nil;
     static dispatch_once_t onceToken;

@@ -13,7 +13,7 @@
 
 @interface HACalendarManager : HASaveAndLoadClass
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 - (void)scheduleDateID:(NSInteger)dateID withSituation:(NSInteger)situationID;
 
 - (void)scheduleNextTenDays;

@@ -19,7 +19,7 @@
 @end
 @implementation HASituationManager
 
-+ (id)sharedInstance
++ (instancetype)sharedInstance
 {
     static HASituationManager* situationManager = nil;
     static dispatch_once_t onceToken;

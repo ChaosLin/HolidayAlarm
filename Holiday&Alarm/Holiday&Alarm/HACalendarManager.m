@@ -21,7 +21,7 @@
 @end
 
 @implementation HACalendarManager
-+ (id)sharedInstance
++ (instancetype)sharedInstance
 {
     static HACalendarManager* calendarManager = nil;
     static dispatch_once_t onceToken;

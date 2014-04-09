@@ -162,6 +162,26 @@
 //    [helper deleteAlarm:alarm];
     NSLog(@"%@", [helper queryAlarmDB]);
     
+    HASituation* situation_week = [[HASituationManager sharedInstance] getWeekDaySituation];
+    //update
+//    NSArray* arr_alarms = situation_week.arr_alarms;
+//    HAAlarm* alarm = [arr_alarms firstObject];
+//    alarm.hour = 6;
+//    alarm.minitue = 1;
+//    [situation_week updateAlarm:alarm];
+    
+    //add
+//    HAAlarm* alarm_temp = [[HAAlarm alloc]init];
+//    alarm_temp.hour = 10;
+//    alarm_temp.minitue = 1;
+//    alarm_temp.alarmId = 10;
+//    [situation_week addAlarm:alarm_temp];
+    
+    //delete
+//    NSArray* arr_alarms = situation_week.arr_alarms;
+//    HAAlarm* alarm_temp = [arr_alarms lastObject];
+//    [situation_week deleteAlarm:alarm_temp];
+    
     [[HACalendarManager sharedInstance] scheduleNextTenDays];
     [self.tableView_notifications reloadData];
     

@@ -10,7 +10,7 @@
 
 @interface HAAlarmScheduler : NSObject
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
 - (BOOL)schedulAlarmWithDateID:(NSInteger)dateID situationId:(NSInteger)situationId;
 - (BOOL)cancelAlarmOnDateID:(NSInteger)dateID;
 - (BOOL)changeAlarmsForSituationID:(NSInteger)situationId;
