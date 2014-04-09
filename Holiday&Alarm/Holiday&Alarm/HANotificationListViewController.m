@@ -114,9 +114,9 @@
 //
     
     
-    [[HACalendarManager sharedInstance] scheduleNextTenDays];
-    
-    [self.tableView_notifications reloadData];
+//    [[HACalendarManager sharedInstance] scheduleNextTenDays];
+//    
+//    [self.tableView_notifications reloadData];
     
     self.calendarView = [[CXCalendarView alloc]init];
     self.calendarView.frame = self.view.bounds;
@@ -164,11 +164,11 @@
     
     HASituation* situation_week = [[HASituationManager sharedInstance] getWeekDaySituation];
     //update
-//    NSArray* arr_alarms = situation_week.arr_alarms;
-//    HAAlarm* alarm = [arr_alarms firstObject];
-//    alarm.hour = 6;
-//    alarm.minitue = 1;
-//    [situation_week updateAlarm:alarm];
+    NSArray* arr_alarms = situation_week.arr_alarms;
+    HAAlarm* alarm = [arr_alarms firstObject];
+    alarm.hour = 6;
+    alarm.minitue = 31;
+    [situation_week updateAlarm:alarm];
     
     //add
 //    HAAlarm* alarm_temp = [[HAAlarm alloc]init];

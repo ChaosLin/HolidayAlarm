@@ -21,6 +21,8 @@
 		592978511854C2BE00DEC997 /* Holiday_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */; };
 		5929785E1854D4B800DEC997 /* ping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5929785D1854D4B800DEC997 /* ping.caf */; };
 		5954183418BC170C00C68386 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954183318BC170C00C68386 /* DateUtils.m */; };
+		596F1F8A18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */ = {isa = PBXBuildFile; fileRef = 596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */; };
+		596F1F8B18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */ = {isa = PBXBuildFile; fileRef = 596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */; };
 		597D4EF0185F404600291A6B /* HASituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EEF185F404600291A6B /* HASituation.m */; };
 		597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF2185F42ED00291A6B /* HAAlarm.m */; };
 		597D4EF6185F440600291A6B /* HADayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF5185F440600291A6B /* HADayObject.m */; };
@@ -84,6 +86,7 @@
 		5929785D1854D4B800DEC997 /* ping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ping.caf; sourceTree = "<group>"; };
 		5954183218BC170C00C68386 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
 		5954183318BC170C00C68386 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "三星优美闹钟铃声.caf"; sourceTree = "<group>"; };
 		597D4EEE185F404600291A6B /* HASituation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASituation.h; sourceTree = "<group>"; };
 		597D4EEF185F404600291A6B /* HASituation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASituation.m; sourceTree = "<group>"; };
 		597D4EF1185F42ED00291A6B /* HAAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAAlarm.h; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 		592978311854C2BE00DEC997 /* Holiday&Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				596F1F8818F58EF900B385BE /* Resource */,
 				59DE1B6C18BCE1F8006508E0 /* OpenResource */,
 				5954183118BC16EC00C68386 /* Utils */,
 				5994C8A118608FD7004F8D38 /* CommonMacros */,
@@ -246,6 +250,14 @@
 				5954183318BC170C00C68386 /* DateUtils.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		596F1F8818F58EF900B385BE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		597D4EED185F400700291A6B /* Model */ = {
@@ -422,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				592978361854C2BE00DEC997 /* InfoPlist.strings in Resources */,
+				596F1F8A18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */,
 				599AECF518561BF500FE2D79 /* HANotificationListViewController.xib in Resources */,
 				5929783E1854C2BE00DEC997 /* Images.xcassets in Resources */,
 				5929785E1854D4B800DEC997 /* ping.caf in Resources */,
@@ -433,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5929784F1854C2BE00DEC997 /* InfoPlist.strings in Resources */,
+				596F1F8B18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
