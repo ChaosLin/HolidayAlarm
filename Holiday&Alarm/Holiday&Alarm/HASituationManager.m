@@ -272,7 +272,8 @@
         alarm.minitue = 1;
         alarm.str_title = @"Hy";
         alarm.alarmId = 1;
-        [newSituation addAlarm:alarm];
+        BOOL result_addAlarm = [newSituation addAlarm:alarm];
+        NSAssert(result_addAlarm, nil);
         
         HASituation* situation_holiday = [[HASituation alloc]init];
         situation_holiday.id_situation = SITUATION_HOLIDAY;
@@ -285,7 +286,8 @@
         alarm_holiday.minitue = 20;
         alarm_holiday.str_title = @"Hy";
         alarm_holiday.alarmId = 2;
-        [situation_holiday addAlarm:alarm_holiday];
+        result_addAlarm = [situation_holiday addAlarm:alarm_holiday];
+        NSAssert(result_addAlarm, nil);
     }
     return result;
 }
