@@ -40,6 +40,15 @@
     [aCoder encodeObject:self.arr_alarms forKey:k_keyArrAlarms];
 }
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        self.arr_alarms = [NSMutableArray arrayWithCapacity:10];
+    }
+    return self;
+}
+
 - (BOOL)updateWithAlarms:(NSArray*)alarms
 {
     BOOL isAlarmsValid = YES;

@@ -19,7 +19,7 @@
 @interface HASituation : NSObject<NSCoding>
 @property (nonatomic, assign) NSInteger id_situation;
 @property (nonatomic, strong) NSString* str_name;
-@property (nonatomic, readonly) NSArray* arr_alarms;
+@property (nonatomic, readonly) NSMutableArray* arr_alarms;
 
 - (BOOL)updateWithAlarms:(NSArray*)alarms;
 
