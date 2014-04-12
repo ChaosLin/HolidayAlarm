@@ -14,8 +14,11 @@
 + (BOOL)isUsingDayLightSavingFlag;
 + (struct tm*)getCurrentTm;
 + (struct tm*)getTempTm;//生成一个今天的0点0分0秒的时间
++ (struct tm*)getTimeStructWithDayId:(NSInteger)dayId;
 + (NSDate*)getDateWithTm:(struct tm*) timeM;
 + (NSInteger)getDayIdWithTm:(struct tm*)timeM;
+//Calculate the days from 1th to first Saturday;
++ (NSInteger)daysInFirstWeek:(NSInteger)dayId;
 @end
 
 @implementation DateUtils
@@ -111,7 +114,19 @@
     int day = timeM->tm_mday;
     return 10000* year + month * 100 + day;
 }
-#pragma mark - NSDate
+
++ (struct tm*)getTimeStructWithDayId:(NSInteger)dayId
+{
+    NSDate* date = [self getDateWithDayId:dayId];
+    return [self getTimeStructWithDate:date];
+}
+#pragma mark - Transform
+//Calculate with NSDate object;
++ (NSInteger)getDayIdWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
+{
+    return year * 10000 + month * 100 + day;
+}
+
 + (NSInteger)getDayIdWithDate:(NSDate*)date
 {
     struct tm* dateStruct = [self getTimeStructWithDate:date];
@@ -145,5 +160,48 @@
     tm_new->tm_mon = (int)month;
     tm_new->tm_mday = (int)day + (int)days;
     return [self getDayIdWithTm:tm_new];
+}
+
+//20140412 -> 6
+//discussion:Return -1 when the dayId is not correct;
++ (NSInteger)getWeekDayWithDayId:(NSInteger)dayId
+{
+    struct tm* dateStruct = [self getTimeStructWithDayId:dayId];
+    NSInteger weekday = dateStruct->tm_wday;
+    //the day since sunday
+    return 0 == weekday?7:weekday;
+}
+
+#pragma mark - CalendarView
++ (NSInteger)daysInFirstWeek:(NSInteger)dayId
+{
+    NSInteger dayid_firstDay = dayId / 100 * 100 + 1;
+    NSInteger volume = [self getVolumeWithDayId:dayid_firstDay];
+    return 6 - volume + 1;
+}
+
++ (NSInteger)getRowWithDayId:(NSInteger)dayId
+{
+    NSInteger result = -1;
+    NSInteger days_firstLine = [self daysInFirstWeek:dayId];
+    NSInteger day = dayId % 100;
+    if (days_firstLine >= day)
+    {
+        result = 0;
+    }
+    else
+    {
+        result = (int)(ceil((day - days_firstLine) / 7.0));
+    }
+    return result;
+}
+
++(NSInteger)getVolumeWithDayId:(NSInteger)dayId
+{
+    NSInteger weekday = [self getWeekDayWithDayId:dayId];
+    //Sunday 7 -> 0;
+    //Monday 1 -> 1;
+    //tm->tm_wday
+    return 7 == weekday?0:weekday;
 }
 @end
