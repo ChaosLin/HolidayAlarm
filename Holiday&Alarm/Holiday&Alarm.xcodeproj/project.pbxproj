@@ -20,7 +20,6 @@
 		5929784F1854C2BE00DEC997 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5929784D1854C2BE00DEC997 /* InfoPlist.strings */; };
 		592978511854C2BE00DEC997 /* Holiday_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */; };
 		5929785E1854D4B800DEC997 /* ping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5929785D1854D4B800DEC997 /* ping.caf */; };
-		5954183418BC170C00C68386 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5954183318BC170C00C68386 /* DateUtils.m */; };
 		596F1F8A18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */ = {isa = PBXBuildFile; fileRef = 596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */; };
 		596F1F8B18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */ = {isa = PBXBuildFile; fileRef = 596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */; };
 		597D4EF0185F404600291A6B /* HASituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EEF185F404600291A6B /* HASituation.m */; };
@@ -32,12 +31,12 @@
 		597D4F03185F55A400291A6B /* HASaveAndLoadClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4F02185F55A400291A6B /* HASaveAndLoadClass.m */; };
 		599AECF418561BF500FE2D79 /* HANotificationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599AECF218561BF500FE2D79 /* HANotificationListViewController.m */; };
 		599AECF518561BF500FE2D79 /* HANotificationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599AECF318561BF500FE2D79 /* HANotificationListViewController.xib */; };
-		59DE1B7B18BCE216006508E0 /* CXCalendarCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7018BCE216006508E0 /* CXCalendarCellView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		59DE1B7C18BCE216006508E0 /* CXCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7218BCE216006508E0 /* CXCalendarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		59DE1B7D18BCE216006508E0 /* CXMultidateCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7418BCE216006508E0 /* CXMultidateCalendarView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		59DE1B7E18BCE216006508E0 /* UIButton+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		59DE1B7F18BCE216006508E0 /* UIColor+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		59DE1B8018BCE216006508E0 /* UILabel+CXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59A602E018FB589E0069A690 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A602DF18FB589E0069A690 /* DateUtils.m */; };
+		59A602E118FB589E0069A690 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A602DF18FB589E0069A690 /* DateUtils.m */; };
+		59A602E718FB58B00069A690 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A602E418FB58B00069A690 /* DayCellView.m */; };
+		59A602E818FB58B00069A690 /* DayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A602E418FB58B00069A690 /* DayCellView.m */; };
+		59A602E918FB58B00069A690 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A602E618FB58B00069A690 /* MonthView.m */; };
+		59A602EA18FB58B00069A690 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A602E618FB58B00069A690 /* MonthView.m */; };
 		59E5CBB818E0763B0006C28A /* HADBQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E5CBB718E0763B0006C28A /* HADBQueryResult.m */; };
 		D6A21AB018BF3D85003EB3E7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */; };
 		D6A21AB118BF3D85003EB3E7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A21AA618BF3D85003EB3E7 /* FMDatabase.m */; };
@@ -84,8 +83,6 @@
 		5929784E1854C2BE00DEC997 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Holiday_AlarmTests.m; sourceTree = "<group>"; };
 		5929785D1854D4B800DEC997 /* ping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ping.caf; sourceTree = "<group>"; };
-		5954183218BC170C00C68386 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		5954183318BC170C00C68386 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "三星优美闹钟铃声.caf"; sourceTree = "<group>"; };
 		597D4EEE185F404600291A6B /* HASituation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASituation.h; sourceTree = "<group>"; };
 		597D4EEF185F404600291A6B /* HASituation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASituation.m; sourceTree = "<group>"; };
@@ -105,19 +102,12 @@
 		599AECF118561BF500FE2D79 /* HANotificationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HANotificationListViewController.h; sourceTree = "<group>"; };
 		599AECF218561BF500FE2D79 /* HANotificationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HANotificationListViewController.m; sourceTree = "<group>"; };
 		599AECF318561BF500FE2D79 /* HANotificationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HANotificationListViewController.xib; sourceTree = "<group>"; };
-		59DE1B6E18BCE216006508E0 /* Calendar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Calendar-Prefix.pch"; sourceTree = "<group>"; };
-		59DE1B6F18BCE216006508E0 /* CXCalendarCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCalendarCellView.h; sourceTree = "<group>"; };
-		59DE1B7018BCE216006508E0 /* CXCalendarCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCalendarCellView.m; sourceTree = "<group>"; };
-		59DE1B7118BCE216006508E0 /* CXCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCalendarView.h; sourceTree = "<group>"; };
-		59DE1B7218BCE216006508E0 /* CXCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCalendarView.m; sourceTree = "<group>"; };
-		59DE1B7318BCE216006508E0 /* CXMultidateCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMultidateCalendarView.h; sourceTree = "<group>"; };
-		59DE1B7418BCE216006508E0 /* CXMultidateCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMultidateCalendarView.m; sourceTree = "<group>"; };
-		59DE1B7518BCE216006508E0 /* UIButton+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CXCalendar.h"; sourceTree = "<group>"; };
-		59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CXCalendar.m"; sourceTree = "<group>"; };
-		59DE1B7718BCE216006508E0 /* UIColor+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CXCalendar.h"; sourceTree = "<group>"; };
-		59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CXCalendar.m"; sourceTree = "<group>"; };
-		59DE1B7918BCE216006508E0 /* UILabel+CXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CXCalendar.h"; sourceTree = "<group>"; };
-		59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CXCalendar.m"; sourceTree = "<group>"; };
+		59A602DE18FB589E0069A690 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
+		59A602DF18FB589E0069A690 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
+		59A602E318FB58B00069A690 /* DayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCellView.h; sourceTree = "<group>"; };
+		59A602E418FB58B00069A690 /* DayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCellView.m; sourceTree = "<group>"; };
+		59A602E518FB58B00069A690 /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
+		59A602E618FB58B00069A690 /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
 		59E5CBB618E0763B0006C28A /* HADBQueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HADBQueryResult.h; sourceTree = "<group>"; };
 		59E5CBB718E0763B0006C28A /* HADBQueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HADBQueryResult.m; sourceTree = "<group>"; };
 		D6A21AA518BF3D85003EB3E7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -198,7 +188,6 @@
 			children = (
 				596F1F8818F58EF900B385BE /* Resource */,
 				59DE1B6C18BCE1F8006508E0 /* OpenResource */,
-				5954183118BC16EC00C68386 /* Utils */,
 				5994C8A118608FD7004F8D38 /* CommonMacros */,
 				597D4F00185F558200291A6B /* BaseClass */,
 				597D4EED185F400700291A6B /* Model */,
@@ -241,15 +230,6 @@
 				5929784D1854C2BE00DEC997 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5954183118BC16EC00C68386 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				5954183218BC170C00C68386 /* DateUtils.h */,
-				5954183318BC170C00C68386 /* DateUtils.m */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		596F1F8818F58EF900B385BE /* Resource */ = {
@@ -297,33 +277,36 @@
 			name = CommonMacros;
 			sourceTree = "<group>";
 		};
+		59A602DD18FB589E0069A690 /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				59A602DE18FB589E0069A690 /* DateUtils.h */,
+				59A602DF18FB589E0069A690 /* DateUtils.m */,
+			);
+			name = DateUtils;
+			path = ../../../ForMyHonor/DateUtilsDemonstration/DateUtils;
+			sourceTree = "<group>";
+		};
+		59A602E218FB58B00069A690 /* RTCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				59A602E318FB58B00069A690 /* DayCellView.h */,
+				59A602E418FB58B00069A690 /* DayCellView.m */,
+				59A602E518FB58B00069A690 /* MonthView.h */,
+				59A602E618FB58B00069A690 /* MonthView.m */,
+			);
+			name = RTCalendarView;
+			path = ../../../ForMyHonor/RTCalendarViewDemo/RTCalendarViewDemo/RTCalendarView;
+			sourceTree = "<group>";
+		};
 		59DE1B6C18BCE1F8006508E0 /* OpenResource */ = {
 			isa = PBXGroup;
 			children = (
+				59A602E218FB58B00069A690 /* RTCalendarView */,
+				59A602DD18FB589E0069A690 /* DateUtils */,
 				D6A21AA418BF3D85003EB3E7 /* FMDB */,
-				59DE1B6D18BCE216006508E0 /* Calendar */,
 			);
 			name = OpenResource;
-			sourceTree = "<group>";
-		};
-		59DE1B6D18BCE216006508E0 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				59DE1B6E18BCE216006508E0 /* Calendar-Prefix.pch */,
-				59DE1B6F18BCE216006508E0 /* CXCalendarCellView.h */,
-				59DE1B7018BCE216006508E0 /* CXCalendarCellView.m */,
-				59DE1B7118BCE216006508E0 /* CXCalendarView.h */,
-				59DE1B7218BCE216006508E0 /* CXCalendarView.m */,
-				59DE1B7318BCE216006508E0 /* CXMultidateCalendarView.h */,
-				59DE1B7418BCE216006508E0 /* CXMultidateCalendarView.m */,
-				59DE1B7518BCE216006508E0 /* UIButton+CXCalendar.h */,
-				59DE1B7618BCE216006508E0 /* UIButton+CXCalendar.m */,
-				59DE1B7718BCE216006508E0 /* UIColor+CXCalendar.h */,
-				59DE1B7818BCE216006508E0 /* UIColor+CXCalendar.m */,
-				59DE1B7918BCE216006508E0 /* UILabel+CXCalendar.h */,
-				59DE1B7A18BCE216006508E0 /* UILabel+CXCalendar.m */,
-			);
-			path = Calendar;
 			sourceTree = "<group>";
 		};
 		D6A21AA418BF3D85003EB3E7 /* FMDB */ = {
@@ -458,30 +441,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				597D4EF6185F440600291A6B /* HADayObject.m in Sources */,
-				59DE1B8018BCE216006508E0 /* UILabel+CXCalendar.m in Sources */,
+				59A602E718FB58B00069A690 /* DayCellView.m in Sources */,
 				597D4EF9185F51E800291A6B /* HAAlarmScheduler.m in Sources */,
 				D6A21AB018BF3D85003EB3E7 /* FMDatabase.m in Sources */,
-				59DE1B7E18BCE216006508E0 /* UIButton+CXCalendar.m in Sources */,
-				59DE1B7C18BCE216006508E0 /* CXCalendarView.m in Sources */,
 				597D4F03185F55A400291A6B /* HASaveAndLoadClass.m in Sources */,
 				592978381854C2BE00DEC997 /* main.m in Sources */,
 				597D4EF0185F404600291A6B /* HASituation.m in Sources */,
-				5954183418BC170C00C68386 /* DateUtils.m in Sources */,
 				5929783C1854C2BE00DEC997 /* HAAppDelegate.m in Sources */,
 				599AECF418561BF500FE2D79 /* HANotificationListViewController.m in Sources */,
 				597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */,
 				597D4EFF185F54B600291A6B /* HASituationManager.m in Sources */,
-				59DE1B7F18BCE216006508E0 /* UIColor+CXCalendar.m in Sources */,
+				59A602E918FB58B00069A690 /* MonthView.m in Sources */,
 				59E5CBB818E0763B0006C28A /* HADBQueryResult.m in Sources */,
 				D6A21AB218BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */,
 				D6A21ABA18BF3D85003EB3E7 /* FMResultSet.m in Sources */,
+				59A602E018FB589E0069A690 /* DateUtils.m in Sources */,
 				D6A21AC918C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */,
-				59DE1B7D18BCE216006508E0 /* CXMultidateCalendarView.m in Sources */,
 				D6A21AB618BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */,
 				D6A21AB418BF3D85003EB3E7 /* FMDatabasePool.m in Sources */,
 				597D4EFC185F534100291A6B /* HACalendarManager.m in Sources */,
 				D6A21AC018BF5155003EB3E7 /* HADBAccessClass.m in Sources */,
-				59DE1B7B18BCE216006508E0 /* CXCalendarCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,13 +469,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A21AB718BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */,
+				59A602E818FB58B00069A690 /* DayCellView.m in Sources */,
 				D6A21ACA18C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */,
 				592978511854C2BE00DEC997 /* Holiday_AlarmTests.m in Sources */,
 				D6A21ABB18BF3D85003EB3E7 /* FMResultSet.m in Sources */,
 				D6A21AB518BF3D85003EB3E7 /* FMDatabasePool.m in Sources */,
 				D6A21AB118BF3D85003EB3E7 /* FMDatabase.m in Sources */,
 				D6A21AB318BF3D85003EB3E7 /* FMDatabaseAdditions.m in Sources */,
+				59A602E118FB589E0069A690 /* DateUtils.m in Sources */,
 				D6A21AC118BF5155003EB3E7 /* HADBAccessClass.m in Sources */,
+				59A602EA18FB58B00069A690 /* MonthView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

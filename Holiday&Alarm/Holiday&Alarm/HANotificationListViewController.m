@@ -12,14 +12,15 @@
 #import "HASituation.h"
 #import "HAAlarm.h"
 #import "HADayObject.h"
-#import "CXCalendarView.h"
+#import "MonthView.h"
+#import "DayCellView.h"
 #import "DateUtils.h"
 #import "HADBAccessClassHelper.h"
 #import "HADBQueryResult.h"
 
-@interface HANotificationListViewController () <CXCalendarViewDelegate, UIAlertViewDelegate>
+@interface HANotificationListViewController () <MonthViewDelegate, MonthViewResource, UIAlertViewDelegate>
 @property (nonatomic, strong) UITableView* tableView_notifications;
-@property (nonatomic, strong) CXCalendarView* calendarView;
+@property (nonatomic, strong) MonthView* calendarView;
 @property (nonatomic, assign) NSInteger dateId_selected;
 - (void)test;
 @end
@@ -118,14 +119,15 @@
 //    
 //    [self.tableView_notifications reloadData];
     
-    self.calendarView = [[CXCalendarView alloc]init];
+    self.calendarView = [[MonthView alloc]init];
     self.calendarView.frame = self.view.bounds;
     self.calendarView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.calendarView.backgroundColor = [UIColor redColor];
-    self.calendarView.calendar = [NSCalendar currentCalendar];
     [self.view addSubview:self.calendarView];
+    self.calendarView.year = 2014;
+    self.calendarView.month = 4;
     self.calendarView.delegate = self;
-    self.calendarView.selectedDate = [NSDate date];
+    self.calendarView.dataResource = self;
     
     UIButton* button_switch = [UIButton buttonWithType:UIButtonTypeCustom];
     [button_switch setBackgroundColor:[UIColor greenColor]];
@@ -229,13 +231,31 @@
     return 1;
 }
 
-#pragma mark - CXCalendarViewDelegate
-- (void) calendarView: (CXCalendarView *) calendarView
-        didSelectDate: (NSDate *) selectedDate
+#pragma mark - MonthViewDelegate
+- (void)monthView:(MonthView *)monthView didSelectDayId:(NSInteger)dayId
 {
-    self.dateId_selected = [DateUtils getDayIdWithDate:selectedDate];
+    self.dateId_selected = dayId;
     UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"选择样式" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"工作日", @"假期", nil];
     [alert show];
+}
+
+#pragma mark - MonthViewDataResource
+- (DayCellView*)dayViewForDayId:(NSInteger)dayId
+{
+    NSLog(@"get day view for day %d", dayId % 100);
+    DayCellView* dayView = [[DayCellView alloc]initWithFrame:CGRectMake(0, 0, 320 / 7 - 1 , 480 / 7 - 1)];
+    UILabel* label = [[UILabel alloc]initWithFrame:dayView.bounds];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = [NSString stringWithFormat:@"%d", dayId % 100];
+    [dayView addSubview:label];
+    
+    NSInteger dayId_today = [DateUtils getDayIdWithDate:[NSDate date]];
+    if (dayId == dayId_today)
+    {
+        dayView.backgroundColor = [UIColor redColor];
+    }
+    return dayView;
 }
 
 #pragma mark - UIAlertViewDelegate
@@ -261,9 +281,9 @@
         if (0 != situationId)
         {
             [[HACalendarManager sharedInstance] scheduleDateID:self.dateId_selected withSituation:situationId];
+            [[HACalendarManager sharedInstance] scheduleNextTenDays];
         }
     }
-    [[HACalendarManager sharedInstance] scheduleNextTenDays];
     [self.tableView_notifications reloadData];
 }
 @end
