@@ -19,7 +19,6 @@
 
 + (NSDate*)getDateWithDateId:(NSInteger)dateId;
 + (NSInteger)getDateIDWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
-+ (NSInteger)getWeekDayWithDateId:(NSInteger)dateId;
 + (NSInteger)getNextDateIdWithDateId:(NSInteger)dateId;
 + (NSInteger)getDays:(NSInteger)days afterDateId:(NSInteger)dateId;
 @end

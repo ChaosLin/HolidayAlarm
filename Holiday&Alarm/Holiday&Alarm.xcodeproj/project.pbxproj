@@ -22,6 +22,8 @@
 		5929785E1854D4B800DEC997 /* ping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5929785D1854D4B800DEC997 /* ping.caf */; };
 		596F1F8A18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */ = {isa = PBXBuildFile; fileRef = 596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */; };
 		596F1F8B18F58F0800B385BE /* 三星优美闹钟铃声.caf in Resources */ = {isa = PBXBuildFile; fileRef = 596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */; };
+		5978D2AF1906582D0052EE46 /* UIColor+CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5978D2AE1906582D0052EE46 /* UIColor+CommonUtils.m */; };
+		5978D2B01906582D0052EE46 /* UIColor+CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5978D2AE1906582D0052EE46 /* UIColor+CommonUtils.m */; };
 		597D4EF0185F404600291A6B /* HASituation.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EEF185F404600291A6B /* HASituation.m */; };
 		597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF2185F42ED00291A6B /* HAAlarm.m */; };
 		597D4EF6185F440600291A6B /* HADayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 597D4EF5185F440600291A6B /* HADayObject.m */; };
@@ -84,6 +86,8 @@
 		592978501854C2BE00DEC997 /* Holiday_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Holiday_AlarmTests.m; sourceTree = "<group>"; };
 		5929785D1854D4B800DEC997 /* ping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ping.caf; sourceTree = "<group>"; };
 		596F1F8918F58F0800B385BE /* 三星优美闹钟铃声.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "三星优美闹钟铃声.caf"; sourceTree = "<group>"; };
+		5978D2AD1906582D0052EE46 /* UIColor+CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CommonUtils.h"; sourceTree = "<group>"; };
+		5978D2AE1906582D0052EE46 /* UIColor+CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CommonUtils.m"; sourceTree = "<group>"; };
 		597D4EEE185F404600291A6B /* HASituation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HASituation.h; sourceTree = "<group>"; };
 		597D4EEF185F404600291A6B /* HASituation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HASituation.m; sourceTree = "<group>"; };
 		597D4EF1185F42ED00291A6B /* HAAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAAlarm.h; sourceTree = "<group>"; };
@@ -240,6 +244,15 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		5978D2AC190658040052EE46 /* CommonUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5978D2AD1906582D0052EE46 /* UIColor+CommonUtils.h */,
+				5978D2AE1906582D0052EE46 /* UIColor+CommonUtils.m */,
+			);
+			path = CommonUtils;
+			sourceTree = "<group>";
+		};
 		597D4EED185F400700291A6B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +315,7 @@
 		59DE1B6C18BCE1F8006508E0 /* OpenResource */ = {
 			isa = PBXGroup;
 			children = (
+				5978D2AC190658040052EE46 /* CommonUtils */,
 				59A602E218FB58B00069A690 /* RTCalendarView */,
 				59A602DD18FB589E0069A690 /* DateUtils */,
 				D6A21AA418BF3D85003EB3E7 /* FMDB */,
@@ -448,6 +462,7 @@
 				592978381854C2BE00DEC997 /* main.m in Sources */,
 				597D4EF0185F404600291A6B /* HASituation.m in Sources */,
 				5929783C1854C2BE00DEC997 /* HAAppDelegate.m in Sources */,
+				5978D2AF1906582D0052EE46 /* UIColor+CommonUtils.m in Sources */,
 				599AECF418561BF500FE2D79 /* HANotificationListViewController.m in Sources */,
 				597D4EF3185F42ED00291A6B /* HAAlarm.m in Sources */,
 				597D4EFF185F54B600291A6B /* HASituationManager.m in Sources */,
@@ -470,6 +485,7 @@
 			files = (
 				D6A21AB718BF3D85003EB3E7 /* FMDatabaseQueue.m in Sources */,
 				59A602E818FB58B00069A690 /* DayCellView.m in Sources */,
+				5978D2B01906582D0052EE46 /* UIColor+CommonUtils.m in Sources */,
 				D6A21ACA18C03C0F003EB3E7 /* HADBAccessClassHelper.m in Sources */,
 				592978511854C2BE00DEC997 /* Holiday_AlarmTests.m in Sources */,
 				D6A21ABB18BF3D85003EB3E7 /* FMResultSet.m in Sources */,

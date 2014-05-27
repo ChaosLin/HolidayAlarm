@@ -21,24 +21,24 @@
 #define k_keyName   @"k_keyName"
 #define k_keyArrAlarms @"k_keyArrAlarms"
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super init])
-    {
-        self.id_situation = [aDecoder decodeIntegerForKey:k_keySituationID];
-        self.str_name = [aDecoder decodeObjectForKey:k_keyName];
-#warning 这种情况下这个数组还会是mutable的么?
-        self.arr_alarms = [aDecoder decodeObjectForKey:k_keyArrAlarms];
-    }
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder
-{
-    [aCoder encodeInteger:self.id_situation forKey:k_keySituationID];
-    [aCoder encodeObject:self.str_name forKey:k_keyName];
-    [aCoder encodeObject:self.arr_alarms forKey:k_keyArrAlarms];
-}
+//- (id)initWithCoder:(NSCoder *)aDecoder
+//{
+//    if (self = [super init])
+//    {
+//        self.id_situation = [aDecoder decodeIntegerForKey:k_keySituationID];
+//        self.str_name = [aDecoder decodeObjectForKey:k_keyName];
+//#warning 这种情况下这个数组还会是mutable的么?
+//        self.arr_alarms = [aDecoder decodeObjectForKey:k_keyArrAlarms];
+//    }
+//    return self;
+//}
+//
+//- (void)encodeWithCoder:(NSCoder *)aCoder
+//{
+//    [aCoder encodeInteger:self.id_situation forKey:k_keySituationID];
+//    [aCoder encodeObject:self.str_name forKey:k_keyName];
+//    [aCoder encodeObject:self.arr_alarms forKey:k_keyArrAlarms];
+//}
 
 - (id)init
 {

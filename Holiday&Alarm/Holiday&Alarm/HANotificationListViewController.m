@@ -17,6 +17,7 @@
 #import "DateUtils.h"
 #import "HADBAccessClassHelper.h"
 #import "HADBQueryResult.h"
+#import "UIColor+CommonUtils.h"
 
 @interface HANotificationListViewController () <MonthViewDelegate, MonthViewResource, UIAlertViewDelegate>
 @property (nonatomic, strong) UITableView* tableView_notifications;
@@ -122,12 +123,13 @@
     self.calendarView = [[MonthView alloc]init];
     self.calendarView.frame = self.view.bounds;
     self.calendarView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.calendarView.backgroundColor = [UIColor redColor];
+    self.calendarView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.calendarView];
-    self.calendarView.year = 2014;
-    self.calendarView.month = 4;
+//    self.calendarView.year = 2014;
+//    self.calendarView.month = 5;
     self.calendarView.delegate = self;
     self.calendarView.dataResource = self;
+    [self.calendarView showToday];
     
     UIButton* button_switch = [UIButton buttonWithType:UIButtonTypeCustom];
     [button_switch setBackgroundColor:[UIColor greenColor]];
@@ -235,7 +237,7 @@
 - (void)monthView:(MonthView *)monthView didSelectDayId:(NSInteger)dayId
 {
     self.dateId_selected = dayId;
-    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"选择样式" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"工作日", @"假期", nil];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"选择样式" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"这一天也要好好努力(认真)", @"去你的闹铃(摔)", nil];
     [alert show];
 }
 
@@ -248,12 +250,28 @@
     label.backgroundColor = [UIColor clearColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = [NSString stringWithFormat:@"%d", dayId % 100];
+    label.textColor = [UIColor colorWithHex:0x676f74];
     [dayView addSubview:label];
     
     NSInteger dayId_today = [DateUtils getDayIdWithDate:[NSDate date]];
+    
+    //获取situation
+    NSInteger situation = [[HACalendarManager sharedInstance] getSituationIDForDayID:dayId];
+    
+    if (SITUATION_WEEKDAY != situation)
+    {
+        dayView.backgroundColor = [UIColor greenColor];
+        label.textColor = [UIColor whiteColor];
+    }
+    else
+    {
+        dayView.backgroundColor = [UIColor colorWithHex:0x1ca9f2];
+        label.textColor = [UIColor whiteColor];
+    }
+    
     if (dayId == dayId_today)
     {
-        dayView.backgroundColor = [UIColor redColor];
+//        dayView.backgroundColor = [UIColor clearColor];
     }
     return dayView;
 }
@@ -282,8 +300,11 @@
         {
             [[HACalendarManager sharedInstance] scheduleDateID:self.dateId_selected withSituation:situationId];
             [[HACalendarManager sharedInstance] scheduleNextTenDays];
+            
+            
         }
     }
     [self.tableView_notifications reloadData];
+    [self.calendarView reloadView];
 }
 @end

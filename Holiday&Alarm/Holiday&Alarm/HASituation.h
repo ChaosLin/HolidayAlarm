@@ -16,7 +16,7 @@
 
 @class HAAlarm;
 
-@interface HASituation : NSObject<NSCoding>
+@interface HASituation : NSObject
 @property (nonatomic, assign) NSInteger id_situation;
 @property (nonatomic, strong) NSString* str_name;
 @property (nonatomic, readonly) NSMutableArray* arr_alarms;

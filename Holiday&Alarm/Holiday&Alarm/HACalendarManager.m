@@ -59,7 +59,7 @@
     for (NSInteger i = 1; i <= 10; i++)
     {
         NSInteger dateId_new = [HADayObject getDays:i afterDateId:dateId_today];
-        NSInteger weekday = [HADayObject getWeekDayWithDateId:dateId_new];
+        BOOL isWeekend = [DateUtils isWeekendWithDayID:dateId_new];
         NSInteger situationId = [[self.dic_dayId2situationId valueForKey:[NSString stringWithFormat:@"%ld", (long)dateId_new]] integerValue];
         if (situationId)
         {
@@ -68,7 +68,7 @@
         }
         else
         {
-            if (1 <= weekday && weekday <= 5)
+            if (!isWeekend)
             {
                 [[HAAlarmScheduler sharedInstance] schedulAlarmWithDateID:dateId_new situationId:SITUATION_WEEKDAY];
                 DLog(@"schedule %ld with situation %d", (long)dateId_new, SITUATION_WEEKDAY);
@@ -82,6 +82,27 @@
     }
 }
 
+- (NSInteger)getSituationIDForDayID:(NSInteger)dayID
+{
+    NSInteger ID_situation = 0;
+    id situationId = [self.dic_dayId2situationId valueForKey:[NSString stringWithFormat:@"%d", dayID]];
+    if (situationId)
+    {
+        ID_situation = [situationId integerValue];
+    }
+    else
+    {
+        if (![DateUtils isWeekendWithDayID:dayID])
+        {
+            ID_situation = SITUATION_WEEKDAY;
+        }
+        else
+        {
+            ID_situation = SITUATION_HOLIDAY;
+        }
+    }
+    return ID_situation;
+}
 
 #pragma mark - SuperClass
 - (BOOL)load

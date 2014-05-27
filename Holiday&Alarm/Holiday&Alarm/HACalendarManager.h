@@ -17,4 +17,7 @@
 - (void)scheduleDateID:(NSInteger)dateID withSituation:(NSInteger)situationID;
 
 - (void)scheduleNextTenDays;
+
+//得转成枚举类型比较好吧。
+- (NSInteger)getSituationIDForDayID:(NSInteger)dayID;
 @end

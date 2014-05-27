@@ -42,24 +42,6 @@
     return year * 10000 + month * 100 + day;
 }
 
-+ (NSInteger)getWeekDayWithDateId:(NSInteger)dateId
-{
-    NSInteger result = -1;
-    NSDate* date = [self getDateWithDateId:dateId];
-    if (date)
-    {
-        NSCalendar* calendar = [NSCalendar currentCalendar];
-        NSDateComponents* components = [calendar components:NSCalendarUnitWeekday fromDate:date];
-        result = components.weekday;
-        result -= 1;
-        if (-1 == result)
-        {
-            result = 7;
-        }
-    }
-    return result;
-}
-
 + (NSInteger)getNextDateIdWithDateId:(NSInteger)dateId
 {
     return [self getDays:1 afterDateId:dateId];
