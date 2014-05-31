@@ -56,7 +56,7 @@
     NSDate* date_today = [NSDate date];
     NSInteger dateId_today = [DateUtils getDayIdWithDate:date_today];
     [(HAAlarmScheduler*)[HAAlarmScheduler sharedInstance] cancelAllLocalNotifications];
-    for (NSInteger i = 1; i <= 10; i++)
+    for (NSInteger i = 0; i <= 10; i++)
     {
         NSInteger dateId_new = [HADayObject getDays:i afterDateId:dateId_today];
         BOOL isWeekend = [DateUtils isWeekendWithDayID:dateId_new];
